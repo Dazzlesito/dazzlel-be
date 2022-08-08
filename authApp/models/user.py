@@ -21,7 +21,7 @@ class User(AbstractBaseUser, PermissionsMixin):
   id = models.BigAutoField(primary_key = True)
   username = models.CharField('Username', max_length = 15, unique = True)
   password = models.CharField('Password', max_length = 256) 
-  email = models.EmailField('Email', max_length = 100) 
+  name = models.EmailField('Email', max_length = 100) 
   
   def save(self, **kwargs):
     some_salt = 'mMUj0DrIK6vgtdIYepkIxN'
